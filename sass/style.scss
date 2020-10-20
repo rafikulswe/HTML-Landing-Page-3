@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background: #222222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff2562;
+        clip-path: polygon(52% 0, 100% 0, 100% 100%, 89% 100%);
+        animation: fade-in 0.5s 1.5s ease-in forwards; // animation: name duration delay direction fill-mode;
+        opacity: 0;
+    }
+    .banner-info {
+        position: relative;
+        padding: 100px 50px 100px 150px;
+        animation: left-in 0.5s 0.5s ease-in forwards; // animation: name duration delay direction fill-mode;
+        opacity: 0;
+
+        h2 {
+            color: #ffffff;
+            font-size: 3em;
+            font-weight: 800;
+        }
+        p {
+            color: #ffffff;
+            font-size: 1.2em;
+        }
+        a {
+            position: relative;
+            display: inline-block;
+            padding: 15px 30px;
+            margin-top: 20px;
+            background: #ff2562;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+    }
+
+    .banner-img {
+        position: relative;
+        padding-right: 100px;
+        animation: fade-in 0.5s 2s ease-in forwards; // animation: name duration delay direction fill-mode;
+        opacity: 0;
+
+        img {
+            max-width: 500px;
+        }
+    }
+
+    .navber {
+        position: absolute;
+        top: 75px;
+        left: 150px;
+        list-style-type: none;
+        display: flex;
+        border-left: 5px solid #ff2562;
+        animation: left-in 0.5s 0s ease-in forwards; // animation: name duration delay direction fill-mode;
+        opacity: 0;
+
+        li a {
+            text-decoration: none;
+            padding: 12px 16px;
+            color: #ffffff;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            &:hover, &.active{
+                color: #ff2562;
+            }
+        }
+    }
+
+    .social {
+        position: absolute;
+        bottom: 75px;
+        left: 150px;
+        list-style-type: none;
+        display: flex;
+        animation: left-in 0.5s 0s ease-in forwards; // animation: name duration delay direction fill-mode;
+        opacity: 1;
+
+        li a {
+            text-decoration: none;
+            padding: 12px 16px;
+            color: #999999;
+            font-size: 14px;
+            &:hover {
+                color: #ffffff;
+            }
+        }
+    }
+
+    @keyframes fade-in {
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    @keyframes left-in {
+        0%{
+            transform: translateX(-200px);
+            opacity: 0;
+        }
+        100%{
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+}
