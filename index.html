@@ -8,7 +8,7 @@
 </head>
 <body>
     <section>
-        <ul class="navber">
+        <ul class="navber" id="navber">
             <li><a href="#">Home</a></li>
             <li><a class="active" href="#">About</a></li>
             <li><a href="#">Performance</a></li>
@@ -28,6 +28,15 @@
             <li><a href="#">Twitter</a></li>
             <li><a href="#">Instragram</a></li>
         </ul>
+        <span class="menu-icon" id="toggle-menu" onclick="menuToggle()"></span>
     </section>
+    <script type="text/javascript">
+        function menuToggle() {
+            let navber = document.getElementById('navber');
+            navber.classList.toggle('active');
+            let toggle = document.getElementById('toggle-menu');
+            toggle.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

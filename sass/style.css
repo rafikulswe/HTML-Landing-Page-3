@@ -176,4 +176,101 @@ section .social li a:hover {
     opacity: 1;
   }
 }
+
+@media (max-width: 991px) {
+  section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section:before {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 7%, 0 40%);
+            clip-path: polygon(0 0, 100% 0, 100% 7%, 0 40%);
+  }
+  section .navber {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+    border: none;
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.95);
+  }
+  section .navber.active {
+    left: 0;
+  }
+  section .navber li {
+    margin: 5px 0;
+  }
+  section .navber li a:hover, section .navber li a.active {
+    color: #ff2562;
+  }
+  section .menu-icon {
+    background: url(../images/menu.png);
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    height: 30px;
+    width: 30px;
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    cursor: pointer;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  section .menu-icon.active {
+    background: url(../images/close.png);
+    -webkit-filter: invert(1);
+            filter: invert(1);
+    cursor: pointer;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    z-index: 1000;
+  }
+  section .banner-info {
+    padding: 50px;
+  }
+  section .banner-info h2 {
+    font-size: 1.5em;
+  }
+  section .banner-info p {
+    font-size: 1em;
+  }
+  section .banner-info a {
+    font-size: 14px;
+    padding: 12px;
+  }
+  section .banner-img {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-right: 0;
+    margin-top: 20px;
+  }
+  section .banner-img img {
+    max-width: 450px;
+  }
+  section .social {
+    left: 45px;
+    bottom: 30px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
